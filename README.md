@@ -22,10 +22,12 @@ An entity that scores low on one dimension may still be valuable in roles that d
 
 ## Documentation
 
-- [SPEC.md](SPEC.md) -- Full specification (v0.3)
+- [SPEC.md](SPEC.md) -- Full specification (v0.9 stable)
 - [VALIDATION_FINDINGS.md](VALIDATION_FINDINGS.md) -- Smoke test observations
 
 ## Status
+
+**v0.9 Stable** -- First stable release. AI entity assessment methodology validated via 4 roundtables (S295-S296).
 
 **T1 Primitive** -- Admitted S294 2026-05-18 via record-043.seal
 
