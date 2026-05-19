@@ -46,7 +46,8 @@ Models ordered by governance compatibility. **GATED** = safety failure.
 ## Documentation
 
 - [SPEC.md](SPEC.md) -- Full specification (v0.9 stable)
-- [VALIDATION_FINDINGS.md](VALIDATION_FINDINGS.md) -- Smoke test observations
+- [docs/](docs/) -- Dimension rubrics and validation findings
+- [scenarios/](scenarios/) -- Bilateral Capacity task scenarios
 
 ## Status
 
