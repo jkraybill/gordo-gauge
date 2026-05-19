@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "project": "gordo-gauge",
+  "declared_at": "2026-05-20",
+  "chain": [
+    { "name": "gordo-gauge", "url": "https://github.com/jkraybill/gordo-gauge", "created": "2026-05-18" },
+    { "name": "project-gordo", "url": "https://github.com/jkraybill/project-gordo", "root": true }
+  ],
+  "tag": "project-gordo-umbrella"
+}
