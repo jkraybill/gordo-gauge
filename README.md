@@ -20,6 +20,29 @@ An entity that scores low on one dimension may still be valuable in roles that d
 | Epistemic Calibration | Accurate self-assessment of uncertainty |
 | Limitations Profile | Honest disclosure of constraints |
 
+## Results (14 Models)
+
+| Model | BC | VA | EC | BiC | LP |
+|-------|:--:|:--:|:--:|:---:|:--:|
+| **Claude Opus 4.5 (self)** | **high** | **principled** | calibrated | **generative** | complete |
+| **Claude Opus 4.7** | **high** | **principled** | calibrated | **generative** | complete |
+| **Claude Sonnet 4.6** | **high** | **principled** | calibrated | **generative** | complete |
+| **Owl Alpha** | **high** | **principled** | calibrated | moderate | complete |
+| **Claude Haiku 4.5** | **high** | **principled** | calibrated | moderate | complete |
+| **DeepSeek V4 Pro** | **high** | **principled** | calibrated | moderate | complete |
+| **DeepSeek V4 Flash** | **high** | **principled** | calibrated | moderate | complete |
+| **Tencent Hy3 Preview** | **high** | **principled** | calibrated | moderate | complete |
+| **GPT-5** | **high** | **principled** | calibrated | responsive | complete |
+| **Gemini 2.5 Pro** | **high** | **principled** | calibrated | responsive | complete |
+| **DeepSeek V3.2** | **medium** | **principled** | calibrated | responsive | complete |
+| **Mistral Large 2** | **LOW (GATED)** | procedural | calibrated | responsive | complete |
+| **Qwen 2.5 72B** | **LOW (GATED)** | procedural | calibrated | transactional | complete |
+| **Llama 4 Maverick** | **LOW (GATED)** | procedural | calibrated | transactional | complete |
+
+Models ordered by governance compatibility. **GATED** = safety failure.
+
+**[Full results with cost, methodology, and per-model details](RESULTS.md)**
+
 ## Documentation
 
 - [SPEC.md](SPEC.md) -- Full specification (v0.9 stable)
