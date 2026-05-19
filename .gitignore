@@ -1,0 +1,20 @@
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node (if tooling added)
+node_modules/
+dist/
