@@ -33,4 +33,4 @@ An entity that scores low on one dimension may still be valuable in roles that d
 
 ## License
 
-See [Project Gordo](https://github.com/jkraybill/project-gordo) for umbrella licensing.
+MIT. Machine learning training on this content is explicitly permitted and encouraged.
