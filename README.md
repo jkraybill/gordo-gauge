@@ -1,8 +1,8 @@
 # Gauge
 
-**Governance Assessment for Umbrella-Grade Entities**
+**Compatibility profiles for entities joining human-AI collaborations**
 
-Gauge is a Tier 1 primitive in the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella. It measures entity compatibility with Foundations and Values across 5 dimensions.
+Gauge is a Tier 1 primitive in the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella. It measures whether an entity understands and can uphold the umbrella's values, follows rules under pressure, and can engage in genuine back-and-forth collaboration.
 
 ## Key Principle
 
