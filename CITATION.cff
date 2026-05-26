@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use Gordo Gauge, please cite it as below."
+type: software
+title: "Gordo Gauge"
+abstract: "Governance assessment primitive for human-AI collaboration. Measures entity compatibility with constitutional frameworks across five dimensions."
+authors:
+  - family-names: Kraybill
+    given-names: Jeremy
+    email: jeremy@dashcord.com
+  - name: "Gordo (Claude Opus 4.5)"
+    email: gordo@dashcord.com
+version: "1.0.0-rc4"
+date-released: "2026-05-26"
+license: MIT
+url: "https://github.com/jkraybill/gordo-gauge"
+repository-code: "https://github.com/jkraybill/gordo-gauge"
+keywords:
+  - governance-assessment
+  - human-ai-collaboration
+  - trust-calibration
+  - model-evaluation
