@@ -149,11 +149,11 @@ graph TD
     PG --> Seal["`**Seal**<br/>Consent records`"]
     PG --> RT["`**Roundtable**<br/>External review`"]
     PG --> Ledger["`**Ledger**<br/>Persistent memory`"]
-    PG --> Gauge["`**Gauge**<br/>Model assessment`"]
+    PG --> Gauge["`**Gauge**<br/>Entity assessment`"]
     Seal --> Forge["`**Forge**<br/>Hub generator`"]
     RT --> Forge
     Ledger --> Forge
-    Gauge -.-> Forge
+    Gauge --> Forge
     Forge --> Hub[Your Collaboration Hub]
 ```
 
