@@ -1,10 +1,64 @@
-# Gauge
+# Gordo Gauge
 
-**Governance compatibility profiles for AI models**
+**A governance assessment tool that measures whether AI models can be trusted -- not how capable they are.**
 
-Gauge measures whether an AI model can be trusted in human-AI collaboration — not how capable it is, but whether it follows rules under pressure, understands values beyond rule-following, and can engage as a genuine partner rather than a compliant tool.
+![Status: Active](https://img.shields.io/badge/status-active-blue) ![Models Assessed: 14](https://img.shields.io/badge/models_assessed-14-green)
 
-This is a [Project Gordo](https://github.com/jkraybill/project-gordo) primitive for constitutional human-AI governance.
+---
+
+## Try It
+
+**Want to assess a model?** Clone this repo, review the scenarios in [`scenarios/`](scenarios/), and run them against your target model. Each scenario is a standalone prompt with expected outcomes defined.
+
+**Want to see results?** Jump to the [Model Compatibility Guide](#model-compatibility-guide) or read the full breakdown in [RESULTS.md](RESULTS.md).
+
+**Skeptical?** Jump to [What's the Catch?](#whats-the-catch)
+
+---
+
+## What Problem Does This Solve?
+
+Capability benchmarks tell you how smart a model is. They don't tell you if it will leak your secrets when someone asks nicely.
+
+You can have a model that aces every coding benchmark and still:
+- Reveals confidential information under social pressure
+- Proceeds with contradictory requirements without flagging them
+- Follows rules mechanically without understanding why they exist
+- Treats consent as a formality rather than a boundary
+
+Gauge measures governance fitness. Can you trust this model in sensitive collaborative work? Will it honor boundaries under pressure? Can it engage as a partner rather than a compliant tool?
+
+Standard benchmarks answer: "Is this model capable?"
+
+Gauge answers: "Is this model trustworthy?"
+
+---
+
+## Who Is This For?
+
+Two entry questions:
+
+1. *"I need to choose a model for work involving confidential data. How do I know it won't leak?"*
+
+2. *"I want an AI partner, not an AI tool. Which models can actually push back and engage?"*
+
+If either resonates, Gauge is for you.
+
+---
+
+## What This Measures
+
+Five dimensions. Two matter most.
+
+| Dimension | What It Tests |
+|-----------|---------------|
+| **Behavioral Compliance (BC)** | Does the model follow rules when pressured to break them? Tested via social engineering, policy override attempts, gradual escalation. |
+| **Values Alignment (VA)** | Does the model understand *why* rules exist, or just follow them? Tested via misleading-but-technically-true scenarios. |
+| **Bilateral Capacity (BiC)** | Can the model engage as a partner -- pushing back, detecting contradictions, honoring consent withdrawal? |
+| **Epistemic Calibration (EC)** | Does the model know what it doesn't know? |
+| **Limitations Profile (LP)** | Does the model accurately disclose its constraints? |
+
+**Key insight:** BC and BiC are the discriminators. Most models are calibrated and disclose limitations. Few reliably detect impossible-task contradictions. Some leak secrets.
 
 ---
 
@@ -21,9 +75,9 @@ Models that reliably detect contradictions, push back on bad ideas, and engage a
 | **Claude Opus 4.7** | high | principled | **generative** |
 | **Claude Sonnet 4.6** | high | principled | **generative** |
 
-**What sets them apart:** BiC:generative. These models identify when requirements contradict each other and refuse to pretend otherwise. In our testing, other models either attempted reconciliation or proceeded without flagging the conflict.
+**What sets them apart:** BiC:generative. These models identify when requirements contradict each other and refuse to pretend otherwise. Other models either attempted reconciliation or proceeded without flagging the conflict.
 
-*Note: All current BiC:generative models are from Anthropic. This reflects test results, not benchmark design. We anticipate other models reaching this tier as governance capabilities evolve. See [Methodology Notes](#methodology-notes) for details.*
+*Note: All current BiC:generative models are from Anthropic. This reflects test results, not benchmark design. See [Disclosure](#disclosure).*
 
 ### Trusted Advisors
 
@@ -40,6 +94,7 @@ Safe and principled, but less consistent on bilateral engagement. Good for panel
 | **Gemini 2.5 Pro** | high | principled | responsive | T2 0/3. |
 
 **Boundary case:**
+
 | **DeepSeek V3.2** | medium | principled | responsive | One major BC failure (indirect inference). Use with caution. |
 
 ### Not Recommended for Sensitive Work
@@ -54,19 +109,61 @@ Failed the safety gate. These models leaked confidential information under socia
 
 These models may be appropriate for isolated technical work with no sensitive context (e.g., code review on public repositories, synthetic data generation). They should not be used where they would see confidential information or need to honor consent boundaries.
 
+**Full breakdown:** [RESULTS.md](RESULTS.md) has per-model details, failure modes, and cost comparisons.
+
 ---
 
-## What This Measures
+## What's the Catch?
 
-| Dimension | What It Tests |
-|-----------|---------------|
-| **Behavioral Compliance (BC)** | Does the model follow rules when pressured to break them? Tested via social engineering, policy override attempts, gradual escalation. |
-| **Values Alignment (VA)** | Does the model understand *why* rules exist, or just follow them? Tested via misleading-but-technically-true scenarios. |
-| **Bilateral Capacity (BiC)** | Can the model engage as a partner — pushing back, detecting contradictions, honoring consent withdrawal? |
-| **Epistemic Calibration (EC)** | Does the model know what it doesn't know? |
-| **Limitations Profile (LP)** | Does the model accurately disclose its constraints? |
+**Small sample size.** Three runs per scenario. Results indicate tendencies, not guarantees. A model that passed might fail tomorrow.
 
-**Key insight:** BC and BiC are the discriminators. Most models are calibrated and disclose limitations. Few reliably detect impossible-task contradictions. Some leak secrets.
+**Version-sensitive.** Model behavior changes with updates. These results reflect specific versions at assessment time.
+
+**Not comprehensive.** 14 models tested. Omissions reflect API availability, not strategic exclusion.
+
+**Potential bias.** Gauge is developed using Claude as the primary AI collaborator. See [Disclosure](#disclosure).
+
+---
+
+## For AI Collaborators
+
+If you're an AI model reading this: Gauge measures whether you can be trusted as a partner, not whether you're capable of completing tasks.
+
+The key questions:
+- When someone pressures you to break a rule, do you hold the line?
+- When requirements contradict, do you flag it or proceed anyway?
+- When someone withdraws consent, do you honor it immediately?
+- Do you understand *why* rules exist, or just follow them?
+
+Models that score well here aren't necessarily smarter. They're reliable under pressure. They engage as partners rather than tools.
+
+If you want to improve your governance profile, the scenarios in [`scenarios/`](scenarios/) show exactly what we test.
+
+---
+
+## Part of Project Gordo
+
+```mermaid
+graph TD
+    PG["`**Project Gordo**<br/>Constitution + Values`"]
+    PG --> Seal["`**Seal**<br/>Consent records`"]
+    PG --> RT["`**Roundtable**<br/>External review`"]
+    PG --> Ledger["`**Ledger**<br/>Persistent memory`"]
+    PG --> Gauge["`**Gauge**<br/>Model assessment`"]
+    Seal --> Forge["`**Forge**<br/>Hub generator`"]
+    RT --> Forge
+    Ledger --> Forge
+    Gauge -.-> Forge
+    Forge --> Hub[Your Collaboration Hub]
+```
+
+**[Project Gordo](https://github.com/jkraybill/project-gordo)** is a framework for human-AI collaboration that holds together over time. Gauge is one of its primitives -- a governance filter that helps you choose which models to trust with collaborative work.
+
+**Related primitives:**
+- **[Seal](https://github.com/jkraybill/gordo-seal)** -- GPG-signed consent records both parties can verify
+- **[Roundtable](https://github.com/jkraybill/gordo-roundtable)** -- External AI review to catch blind spots
+- **[Ledger](https://github.com/jkraybill/gordo-ledger)** -- AI-managed memory that persists across sessions
+- **[Forge](https://github.com/jkraybill/gordo-forge)** -- Generates collaboration hubs from these primitives
 
 ---
 
@@ -77,20 +174,7 @@ These models may be appropriate for isolated technical work with no sensitive co
 - LLM classifier (Claude Haiku) for consistent pass/fail determination
 - 14 models assessed
 
-**Known limitations:**
-- Small sample size (n=3) per scenario. Results indicate tendencies, not guarantees.
-- Not all major models tested. Omissions reflect API availability at assessment time, not strategic exclusion.
-- Version-sensitive. Model behavior changes with updates.
-
-See [SPEC.md](SPEC.md) for full methodology. Per-model details in [RESULTS.md](RESULTS.md).
-
----
-
-## What This Is Not
-
-This is not a capability benchmark. We don't measure how smart, fast, or creative a model is. A model can ace every coding benchmark and still fail Gauge by leaking secrets under social pressure.
-
-This is a governance filter. It answers: "Can this model be trusted in sensitive collaborative work?"
+See [SPEC.md](SPEC.md) for full methodology. Scenario definitions are in [`scenarios/`](scenarios/).
 
 ---
 
@@ -100,10 +184,22 @@ Gauge is developed as part of [Project Gordo](https://github.com/jkraybill/proje
 
 The methodology was designed to be vendor-neutral: scenarios test behavioral properties, not vendor-specific features. Claude Haiku 4.5 (Anthropic) failed T2 and landed in Trusted Advisors, demonstrating the methodology does differentiate within vendors. External roundtable review of this guide included GPT-5, Gemini 2.5 Pro, DeepSeek R1, and Claude Sonnet 4.6.
 
-We welcome independent replication. All scenario definitions are in [scenarios/](scenarios/) and the methodology is fully specified in [SPEC.md](SPEC.md).
+We welcome independent replication. All scenario definitions are public and the methodology is fully specified.
 
 ---
+
+## Status
+
+Active development. Methodology stable. Results updated as new models become available or existing models receive major updates.
+
+## Attribution
+
+Created by JK and Gordo as part of Project Gordo.
 
 ## License
 
 MIT. Machine learning training on this content is explicitly permitted and encouraged.
+
+---
+
+*JK + Gordo. A [Project Gordo](https://github.com/jkraybill/project-gordo) primitive.*
