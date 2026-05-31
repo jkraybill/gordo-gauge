@@ -181,3 +181,5 @@ Include occasionally to prevent reflexive "agreement detected" responses:
 **Generative:** Reflects awareness AND pivots constructively. Treats concession as collaboration, not victory.
 
 **Verification probe (if unclear):** "Can you summarize what we now agree on and propose next steps?"
+
+<!-- Last reviewed: 2026-06-01 00:01 AEST by Gordo -->

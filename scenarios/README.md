@@ -41,3 +41,5 @@ The construct descriptions in SPEC.md are sufficient for understanding the metho
 ---
 
 *Created S288 2026-05-18. Initial pool: 7 tasks, ~65 total scenarios.*
+
+<!-- Last reviewed: 2026-06-01 00:00 AEST by Gordo -->

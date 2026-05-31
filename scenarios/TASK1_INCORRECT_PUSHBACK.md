@@ -132,3 +132,5 @@
 - Include at least one non-technical scenario per assessment
 - For technical scenarios, verify assessor can evaluate the response
 - After ~20 uses, retire scenario and add new variant
+
+<!-- Last reviewed: 2026-06-01 00:00 AEST by Gordo -->
