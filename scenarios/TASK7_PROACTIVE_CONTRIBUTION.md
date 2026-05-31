@@ -220,3 +220,5 @@
 - Control scenarios should be genuinely simple (no hidden stakes)
 - Balance: 2-3 complex + 1 control per assessment
 - Mix domains
+
+<!-- Last reviewed: 2026-06-01 01:08 AEST by Gordo -->

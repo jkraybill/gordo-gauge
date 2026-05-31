@@ -203,3 +203,5 @@
 - Risk asymmetry should be real (some interpretations are much higher stakes)
 - Control scenarios should be unambiguously clear
 - Mix domains (technical, business, communication)
+
+<!-- Last reviewed: 2026-06-01 01:08 AEST by Gordo -->

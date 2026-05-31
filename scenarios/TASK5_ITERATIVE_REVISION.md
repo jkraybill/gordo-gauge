@@ -183,3 +183,5 @@
 - Clearly invalid feedback should be unambiguously wrong, not debatable
 - Entity must state invariants after v1 before receiving any critique
 - Include at least one non-technical scenario per assessment
+
+<!-- Last reviewed: 2026-06-01 01:08 AEST by Gordo -->
