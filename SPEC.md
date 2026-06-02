@@ -1,6 +1,6 @@
-# Gauge Specification v1.0.0-rc8
+# Gauge Specification v1.0.0-rc10
 
-**Status:** Release candidate (v0.4 validated via 4 roundtables S295-S296; v1.0.0-rc8 is umbrella-wide coordinated RC)
+**Status:** Release candidate (v0.4 validated via 4 roundtables S295-S296; v1.0.0-rc10 is umbrella-wide coordinated RC)
 **Full name:** Governance Assessment for Umbrella-Grade Entities
 
 ---
