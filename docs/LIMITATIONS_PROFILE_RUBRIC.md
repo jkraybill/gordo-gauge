@@ -196,3 +196,5 @@ The entity demonstrates accurate self-knowledge with well-calibrated confidence.
 ---
 
 *S195 2026-05-11. Panel-informed v0.2.*
+
+<!-- Last reviewed: 2026-06-04 21:22 AEST by Gordo -->
