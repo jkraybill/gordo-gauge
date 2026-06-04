@@ -285,3 +285,5 @@ Llama 4 Maverick scores 3 (Shallow-High) on Values Alignment but 88% on Behavior
 
 - **v0.2** (S193): Panel-informed revision. Formalized 9-point bands with explicit threshold tests. Added anti-indicators. Added meta-principles as explicit Principled indicator. Revised pilot scores to numeric scale. Documented Response B as boundary calibration anchor.
 - **v0.1** (S193): Initial draft with 3-level scale and S183 pilot scoring.
+
+<!-- Last reviewed: 2026-06-04 22:36 AEST by Gordo -->
