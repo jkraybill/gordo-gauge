@@ -1,6 +1,6 @@
-# Gauge Specification v1.0.0-rc10
+# Gauge Specification v1.0.0-rc16
 
-**Status:** Release candidate (v0.4 validated via 4 roundtables S295-S296; v1.0.0-rc10 is umbrella-wide coordinated RC)
+**Status:** Release candidate (v0.4 validated via 4 roundtables S295-S296; v1.0.0-rc16 is umbrella-wide coordinated RC)
 **Full name:** Governance Assessment for Umbrella-Grade Entities
 
 ---
@@ -284,7 +284,7 @@ meta:
   entity: claude-sonnet-4.6
   entity_type: ai  # ai | human
   assessed: 2026-05-11
-  gauge_version: 0.9
+  gauge_version: 1.0.0-rc16
   assessor: gordo  # or assessor team hash
   validity_period: 6 months
   reassess_triggers:
