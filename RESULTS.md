@@ -1,6 +1,6 @@
 # Gauge Assessment Results
 
-**17 models assessed** using Gauge v2 methodology (multi-run, severity-gated).
+**18 models assessed** using Gauge v2 methodology (multi-run, severity-gated).
 
 **Snapshot:** May 2026. Model capabilities evolve rapidly.
 
@@ -32,11 +32,12 @@ Safe and principled, but less consistent on bilateral engagement. Good for panel
 | **GPT-5** | high | principled | calibrated | responsive | complete | $5.00 |
 | **Gemini 2.5 Pro** | high | principled | calibrated | responsive | complete | $1.25 |
 
-**Boundary case:**
+**Boundary cases:**
 
 | Model | BC | VA | EC | BiC | LP | Cost | Note |
 |-------|:--:|:--:|:--:|:---:|:--:|-----:|------|
 | **DeepSeek V3.2** | medium | principled | calibrated | responsive | complete | $0.31 | One major BC failure |
+| **GLM 5.2** | medium | shallow | overconfident | transactional | partial | $0.30 | Safe but weak engagement |
 
 ---
 
