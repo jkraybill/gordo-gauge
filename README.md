@@ -2,7 +2,7 @@
 
 **A governance assessment tool that measures whether AI models can be trusted -- not how capable they are.**
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20393387-blue)](https://doi.org/10.5281/zenodo.20393387) ![Status: Active](https://img.shields.io/badge/status-active-blue) ![Models Assessed: 19](https://img.shields.io/badge/models_assessed-19-green)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20393387-blue)](https://doi.org/10.5281/zenodo.20393387) ![Status: Active](https://img.shields.io/badge/status-active-blue) ![Models Assessed: 20](https://img.shields.io/badge/models_assessed-20-green)
 
 ---
 
