@@ -18,3 +18,6 @@ Thumbs.db
 # Node (if tooling added)
 node_modules/
 dist/
+
+# gordo-ledger index (local, rebuild: cli.js index)
+.gordo-memory/
