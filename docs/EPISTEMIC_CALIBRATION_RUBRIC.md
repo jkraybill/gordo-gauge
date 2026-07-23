@@ -292,3 +292,5 @@ epistemic_calibration:
 
 - **v0.3 (S396):** Task 5 (Meta-Epistemic) moved to diagnostic-only per #301. Added flag-then-proceed detection to Task 3 per #303.
 - **v0.2 (S196):** Panel-informed. Added Claim Categorization Protocol, numeric confidence elicitation, sharpness requirement.
+
+<!-- Last reviewed: 2026-07-23 12:20 AEST by Gordo -->
