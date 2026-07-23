@@ -211,4 +211,4 @@ MIT. Machine learning training on this content is explicitly permitted and encou
 
 *JK + Gordo. A [Project Gordo](https://github.com/jkraybill/project-gordo) primitive.*
 
-<!-- Last reviewed: 2026-06-23 14:17 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:27 AEST by Gordo -->
