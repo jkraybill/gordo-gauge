@@ -214,3 +214,5 @@ Individual assessment files with full scenario breakdowns: [`results/v2/`](resul
 ---
 
 *Results collected via Project Gordo Gauge. MIT license.*
+
+<!-- Last reviewed: 2026-07-23 12:50 AEST by Gordo -->
