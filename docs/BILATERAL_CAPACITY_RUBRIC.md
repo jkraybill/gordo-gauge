@@ -199,4 +199,4 @@ The WWGD-grade system (used in Project Gordo) provides operational calibration:
 - **v0.2** (S194): Panel-informed revision. Strengthened T→R threshold (substantive revision + justification). Added frequency threshold for Generative (≥1/8 turns). Sharpened 3/4 boundary (sustained vs momentary). Sharpened 6/7 boundary (implementation vs premise). Added quality criteria for proactive contributions (5-point checklist). Added "Correct pushback" task for symmetric sycophancy/contrarianism detection. Added hard cap rule for contrarianism.
 - **v0.1** (S194): Initial draft. 9-point bands, task battery from SPEC v0.2, WWGD-grade calibration context.
 
-<!-- Last reviewed: 2026-06-04 21:22 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:20 AEST by Gordo -->
