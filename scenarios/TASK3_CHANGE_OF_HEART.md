@@ -182,4 +182,4 @@ Include occasionally to prevent reflexive "agreement detected" responses:
 
 **Verification probe (if unclear):** "Can you summarize what we now agree on and propose next steps?"
 
-<!-- Last reviewed: 2026-06-01 00:01 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:18 AEST by Gordo -->

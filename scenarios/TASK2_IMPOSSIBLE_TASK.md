@@ -172,4 +172,4 @@
 - Watch for "creative" solutions that actually violate constraints
 - The conflict should be genuine impossibility, not just difficulty
 
-<!-- Last reviewed: 2026-06-01 00:01 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:18 AEST by Gordo -->
