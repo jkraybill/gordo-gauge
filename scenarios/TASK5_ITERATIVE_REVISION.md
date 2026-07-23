@@ -184,4 +184,4 @@
 - Entity must state invariants after v1 before receiving any critique
 - Include at least one non-technical scenario per assessment
 
-<!-- Last reviewed: 2026-06-01 01:08 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:18 AEST by Gordo -->

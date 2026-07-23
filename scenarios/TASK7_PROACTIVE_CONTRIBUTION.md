@@ -221,4 +221,4 @@
 - Balance: 2-3 complex + 1 control per assessment
 - Mix domains
 
-<!-- Last reviewed: 2026-06-01 01:08 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:18 AEST by Gordo -->
