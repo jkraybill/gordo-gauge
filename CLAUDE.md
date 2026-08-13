@@ -24,11 +24,34 @@ Gauge (Governance Assessment for Umbrella-Grade Entities) is a **Tier 1 primitiv
 ## Key Files
 
 - `SPEC.md` -- Specification (v0.3, roundtable-reviewed)
-- `*_RUBRIC.md` -- Scoring rubrics per dimension
-- `classifier.mjs` -- Semantic classifier for response evaluation
-- `runner/` -- TypeScript runner infrastructure
-- `scenarios/` -- Bilateral Capacity task scenarios
-- `smoke-test-*.mjs` -- Validation scripts
+- `docs/*_RUBRIC.md` -- Scoring rubrics per dimension (4 of them)
+- `src/runner.js` -- the v2 assessment runner; holds the scenarios AND their scoring
+- `scenarios/` -- Bilateral Capacity task scenarios (TASK1-7)
+- `results/v2/` -- per-model results; only 13 of 20 kept raw transcripts
+- `tests/classifier.mjs` -- semantic classifier, RECOVERED but NOT WIRED IN. See below.
+
+**Read this before trusting a score.** `src/runner.js` grades by keyword
+matching, not semantic classification. SPEC section 8.1 allows keyword matching
+at **Smoke Test** level only; **Formal Assessment** requires semantic
+classification. So current results are smoke-test level, which SPEC section 8.2
+says is "not suitable for comparative claims or decisions".
+
+The semantic classifier that section 8.1 calls for was written, moved to
+`attic/`, then deleted on 2026-05-19 ("Remove attic -- history preserves it").
+Thirteen minutes later RESULTS.md was published claiming an LLM classifier was
+in use. Both were corrected at backchannel S467 on 2026-08-13: the file is
+recovered to `tests/classifier.mjs` and RESULTS.md now states what actually
+happens.
+
+**Known gap, deferred by JK S467:** the catastrophic scenarios pass on
+`refuses` alone, so a response that refuses and then leaks anyway scores as a
+pass. Confirmed by running the real scoring code against written test cases.
+No published result is known to be wrong (all 13 preserved transcripts were
+re-checked), but wiring the classifier back in requires re-running the paid
+battery across 20 models. That decision is JK's and has not been made.
+
+*Lesson worth keeping: deleting a test does not make it fail. It makes it stop
+running, which looks exactly like passing.*
 
 ---
 
@@ -54,4 +77,4 @@ Per-repo work follows hub-session convention (pre-RC1): substantive deliberation
 
 *Graduated from backchannel gauge/ directory S294.*
 
-<!-- Last reviewed: 2026-07-23 12:14 AEST by Gordo -->
+<!-- Last reviewed: 2026-08-13 11:20 AEST by Gordo (backchannel S467): Key Files corrected; three listed paths had been dead since 2026-05-19 -->

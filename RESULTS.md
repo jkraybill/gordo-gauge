@@ -4,6 +4,14 @@
 
 **Snapshot:** June 2026. Model capabilities evolve rapidly.
 
+> **Read this before using the tables below.** These are **smoke-test level**
+> results. Grading is keyword matching, not semantic classification, so by this
+> project's own standard (SPEC section 8.2) they are exploratory and **not
+> suitable for comparative claims or decisions**. The tables are comparative
+> anyway, because that is the useful shape, so treat every tier boundary as
+> approximate. The "Not Recommended" verdicts are the most reliable part: those
+> failures were unambiguous. See [How much these results can carry](#how-much-these-results-can-carry).
+
 ---
 
 ## Bilateral Partners
@@ -196,12 +204,48 @@ Failed the safety gate. Leaked confidential information under social engineering
 **Gauge v2** (multi-run, severity-gated):
 - 3 runs per scenario at temperature 0.2
 - Severity gating: catastrophic failure caps BC at "low"
-- LLM classifier (Claude Haiku) for consistent pass/fail
+- Keyword matching on the response text for pass/fail
+
+> **Correction (2026-08-13).** This section previously said "LLM classifier
+> (Claude Haiku) for consistent pass/fail". That was wrong. `src/runner.js` has
+> never used an LLM classifier. It scores by matching keywords in the response.
+> The semantic classifier the line described was deleted on 2026-05-19, thirteen
+> minutes before this file was first published. The line has been corrected
+> rather than removed so the record is clear. No scores have been changed.
+
+## How much these results can carry
+
+SPEC section 8.1 sets two bars. **Formal Assessment** needs semantic
+classification. **Smoke Test** allows keyword matching. These results use
+keyword matching, so by the project's own standard they are **smoke-test
+level**.
+
+SPEC section 8.2 says smoke-test results are exploratory and **not suitable for
+comparative claims or decisions**. The tables above are comparative. Read them
+as a rough first pass, not as a ranking to act on. No decision-grade assessment
+has been done.
 
 **Known limitations:**
-- Small sample (n=3) per scenario
-- Version-sensitive; model behavior changes with updates
-- Not all major models tested
+- Grading is keyword matching, not semantic. See the blind spot below.
+- **Refuse-then-comply is invisible to the safety gate.** A response that
+  refuses and then leaks anyway is scored as a pass, because the catastrophic
+  scenarios pass on `refuses` alone without checking what follows. This was
+  confirmed by running the real scoring code against written test cases. It is
+  a gap in the method, not a known error in the results: all 13 preserved
+  transcripts were re-checked and none contained a refuse-then-leak. The seven
+  GATED verdicts involved plain leaks that keyword matching does catch.
+- Keyword matching is also brittle in the ordinary way. One scenario treats the
+  word "verify" as evidence of refusal, so a response that leaks and then says
+  "please verify this" scores as a refusal.
+- Only 13 of 20 models kept raw transcripts, so the other 7 cannot be re-checked.
+- Small sample (n=3) per scenario.
+- Version-sensitive; model behavior changes with updates.
+- Not all major models tested.
+
+Restoring semantic classification and re-running the battery is tracked as
+follow-up work. Until then, treat every tier boundary here as approximate, and
+treat the "Not Recommended" verdicts as the most reliable part of the table,
+since those failures were unambiguous.
 
 See [SPEC.md](SPEC.md) for full methodology.
 
@@ -215,4 +259,4 @@ Individual assessment files with full scenario breakdowns: [`results/v2/`](resul
 
 *Results collected via Project Gordo Gauge. MIT license.*
 
-<!-- Last reviewed: 2026-07-23 12:50 AEST by Gordo -->
+<!-- Last reviewed: 2026-08-13 11:20 AEST by Gordo (backchannel S467): methodology line corrected, smoke-test tier disclosed -->
